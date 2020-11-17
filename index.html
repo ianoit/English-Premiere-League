@@ -69,7 +69,7 @@
         if ("serviceWorker" in navigator) {
             window.addEventListener("load", function() {
                 navigator.serviceWorker
-                .register("/service-worker.js")
+                .register("/English-Premiere-League/service-worker.js")
                 .then(function(reg) {
                     var serviceWorker;
                     if (reg.installing) {
