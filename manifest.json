@@ -3,7 +3,7 @@
   "gcm_sender_id": "1095688990092",
   "short_name": "EPL",
   "description": "English Premiere League",
-  "start_url": "/index.html",
+  "start_url": "/English-Premiere-League/index.html",
   "display": "standalone",
   "background_color": "#FFF",
   "theme_color": "#FFF",
