@@ -1,0 +1,419 @@
+$base-color: #37003c;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.rank-no {
+    padding: 3px 5px;
+    max-width: 30px;
+    color: #fff;
+    text-align: center;
+
+    .blue {
+        background: #4285f4;
+    }
+
+    .orange {
+        background: #fa7b17;
+    }
+
+    .grey {
+        background: #989898;
+    }
+
+    .red {
+        background: #ea4335;
+    }
+}
+
+nav#nav-top {
+    background: $base-color;
+
+    .mobile-nav {
+        display: none;
+
+        i {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .nav-wrapper {
+        width: 95%;
+        margin: 0 auto;
+
+        .brand-logo {
+            padding: 0px;
+
+            img {
+                height: 64px;
+                padding: 0px;
+                width: auto;
+            }
+        }
+        ul {
+            li {
+                a {
+                    i {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+nav#nav-bottom {
+    background: $base-color;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    display: none;
+
+    .nav-wrapper {
+        width: 95%!important;
+        
+        ul {
+            display: flex;
+            justify-content: space-between!important;
+            flex-direction: row!important;
+
+            li {
+                a {
+                    i {
+                        font-size: 20px !important;
+                    }
+                    
+                    .text {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#body-content {
+
+    #standings-table {
+        tbody {
+            tr {
+                cursor: pointer;
+            }
+        }
+    }
+
+    #team {
+        .logo {
+            width: 100%;
+            padding: 30px 0;
+            background-image: url('../img/pl-footer-m-top.svg'), url('../img/pl-footer-m-bottom.svg');
+            background-color: #37003c;
+            background-position: 0 0,0 100%;
+            background-repeat: no-repeat,no-repeat;
+            padding: 3rem 1rem; background-size: cover;
+
+            img {
+                width: 100px;
+                display: block;
+                margin: 0 auto
+            }
+
+            .team-name {
+                text-align: center;
+                color: #fff;
+                font-weight: bolder;
+                display: block;
+                margin: 0 auto;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    #save {
+
+        i {
+            color: #F7CA18;    
+        }
+        
+    }
+
+    #matches-content, #favorites {
+        width: 100% !important;
+
+        .menu {
+            background-color: #760c52;
+            display: flex;
+            justify-content: space-between !important;
+            position: fixed;
+            right: 0;
+            top: 64px;
+            left: 0;
+            z-index: 2;
+
+            .matchday-btn {
+                color: #fff;
+                font-size: 25px;
+                padding: 12px 16px 0 16px;
+
+                &:hover {
+                    cursor: pointer;
+                    color: #dedede;
+                }
+            }
+
+            #scrollmenu {
+                overflow: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                a {
+                    display: inline-block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px;
+                    text-decoration: none;
+
+                    &:hover, &:active {
+                        background-color: #37003c;
+                    }
+                }
+            }
+
+        }
+
+        #homeMatches {
+            margin-top: 55px;
+
+            table {
+                tr {
+                    border-bottom: none !important;
+
+                    td {
+                        text-align: center;
+                        padding: 2px 3px;
+                    }
+                }
+            }
+
+            .title {
+                text-align:center;
+                font-size: 1.5rem;
+                font-weight: 900;
+            }
+
+            .card {
+                .card-content {
+                    padding: 5px !important;
+                }
+            }
+
+            .date {
+                font-size: 1.2em;
+                font-weight: 700;
+                padding-bottom: 12px;
+            }
+
+            .logo {
+                width: 30px;
+                height: 30px;
+                margin: 0 auto;
+            }
+
+            .score {
+                font-size: 2em;
+                line-height: 2em;
+            }
+
+            .team-name {
+                display: -webkit-box;
+                font-size: 1em;
+                font-weight: 500;
+                line-height: 1.2rem;
+                min-height: 3.6rem;
+            }
+
+            .status {
+                padding: 3px 10px;
+                background: #ddd;
+                border-radius: 4px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    #favorites {
+        margin-bottom: 75px;
+        
+        #homeMatches {
+            margin-top: 15px !important;
+        }
+    }
+}
+
+#notfound {
+    height: 55vh;
+
+    .notfound{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        max-width: 920px;
+        width: 100%;
+        line-height: 1.4;
+        text-align: center;
+        padding:{
+            left: 15px;
+            right: 15px;
+        }
+        
+        .notfound-404{
+            position: absolute;
+            height: 100px;
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            z-index: -1;
+
+            h1{
+                font-family: 'Maven Pro', sans-serif;
+                color: #ececec;
+                font-weight: 900;
+                font-size: 30vw;
+                margin: 0px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        h2 {
+            font-family: 'Maven Pro', sans-serif;
+            font-size: 46px;
+            color: #000;
+            text-transform: uppercase;
+            margin: 0px;
+        }
+    }
+}
+
+#loading {
+    height: 55vh;
+    display: none;
+
+    .loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+#toast-container {
+    top: auto !important;
+    right: auto !important;
+    bottom: 10%;
+    left: 5%;
+}
+
+@media (max-width: 992px) {
+
+    nav#nav-bottom {
+        display: block;
+    }
+
+    .container {
+        margin-bottom: 70px;
+    }
+
+    .container-fluid {
+        margin-bottom: 70px;
+    }
+
+    .fixed-action-btn {
+        bottom: 75px;
+    }
+
+    #toast-container {
+        min-width: 100%;
+        left: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .container-fluid {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 601px){
+
+    nav#nav-top .nav-wrapper .brand-logo img {
+        height: 45px;
+        margin-top: 5px;
+    }
+
+    .container-fluid {
+        width: 85%;
+    }
+
+    #body-content {
+        #matches-content {
+            .menu {
+                top: 55px;
+            }
+        }
+    }
+
+    #toast-container {
+        bottom: 8%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    #notfound {
+        .notfound{
+            .notfound-404{
+                h1{
+                    font-size: 162px;
+                }
+            }
+
+            h2{
+                font-size: 26px;
+            }
+        }
+    }
+}

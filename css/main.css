@@ -1,0 +1,329 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.rank-no {
+  padding: 3px 5px;
+  max-width: 30px;
+  color: #fff;
+  text-align: center;
+}
+.rank-no .blue {
+  background: #4285f4;
+}
+.rank-no .orange {
+  background: #fa7b17;
+}
+.rank-no .grey {
+  background: #989898;
+}
+.rank-no .red {
+  background: #ea4335;
+}
+
+nav#nav-top {
+  background: #37003c;
+}
+nav#nav-top .mobile-nav {
+  display: none;
+}
+nav#nav-top .mobile-nav i:hover {
+  cursor: pointer;
+}
+nav#nav-top .nav-wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+nav#nav-top .nav-wrapper .brand-logo {
+  padding: 0px;
+}
+nav#nav-top .nav-wrapper .brand-logo img {
+  height: 64px;
+  padding: 0px;
+  width: auto;
+}
+nav#nav-top .nav-wrapper ul li a i {
+  display: none;
+}
+
+nav#nav-bottom {
+  background: #37003c;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  display: none;
+}
+nav#nav-bottom .nav-wrapper {
+  width: 95% !important;
+}
+nav#nav-bottom .nav-wrapper ul {
+  display: flex;
+  justify-content: space-between !important;
+  flex-direction: row !important;
+}
+nav#nav-bottom .nav-wrapper ul li a i {
+  font-size: 20px !important;
+}
+nav#nav-bottom .nav-wrapper ul li a .text {
+  display: none;
+}
+
+#body-content #standings-table tbody tr {
+  cursor: pointer;
+}
+#body-content #team .logo {
+  width: 100%;
+  padding: 30px 0;
+  background-image: url("../img/pl-footer-m-top.svg"), url("../img/pl-footer-m-bottom.svg");
+  background-color: #37003c;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat, no-repeat;
+  padding: 3rem 1rem;
+  background-size: cover;
+}
+#body-content #team .logo img {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+#body-content #team .logo .team-name {
+  text-align: center;
+  color: #fff;
+  font-weight: bolder;
+  display: block;
+  margin: 0 auto;
+  font-size: 3rem;
+}
+#body-content #save i {
+  color: #F7CA18;
+}
+#body-content #matches-content, #body-content #favorites {
+  width: 100% !important;
+}
+#body-content #matches-content .menu, #body-content #favorites .menu {
+  background-color: #760c52;
+  display: flex;
+  justify-content: space-between !important;
+  position: fixed;
+  right: 0;
+  top: 64px;
+  left: 0;
+  z-index: 2;
+}
+#body-content #matches-content .menu .matchday-btn, #body-content #favorites .menu .matchday-btn {
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 16px 0 16px;
+}
+#body-content #matches-content .menu .matchday-btn:hover, #body-content #favorites .menu .matchday-btn:hover {
+  cursor: pointer;
+  color: #dedede;
+}
+#body-content #matches-content .menu #scrollmenu, #body-content #favorites .menu #scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+#body-content #matches-content .menu #scrollmenu::-webkit-scrollbar, #body-content #favorites .menu #scrollmenu::-webkit-scrollbar {
+  display: none;
+}
+#body-content #matches-content .menu #scrollmenu a, #body-content #favorites .menu #scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+#body-content #matches-content .menu #scrollmenu a:hover, #body-content #matches-content .menu #scrollmenu a:active, #body-content #favorites .menu #scrollmenu a:hover, #body-content #favorites .menu #scrollmenu a:active {
+  background-color: #37003c;
+}
+#body-content #matches-content #homeMatches, #body-content #favorites #homeMatches {
+  margin-top: 55px;
+}
+#body-content #matches-content #homeMatches table tr, #body-content #favorites #homeMatches table tr {
+  border-bottom: none !important;
+}
+#body-content #matches-content #homeMatches table tr td, #body-content #favorites #homeMatches table tr td {
+  text-align: center;
+  padding: 2px 3px;
+}
+#body-content #matches-content #homeMatches .title, #body-content #favorites #homeMatches .title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+#body-content #matches-content #homeMatches .card .card-content, #body-content #favorites #homeMatches .card .card-content {
+  padding: 5px !important;
+}
+#body-content #matches-content #homeMatches .date, #body-content #favorites #homeMatches .date {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding-bottom: 12px;
+}
+#body-content #matches-content #homeMatches .logo, #body-content #favorites #homeMatches .logo {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+#body-content #matches-content #homeMatches .score, #body-content #favorites #homeMatches .score {
+  font-size: 2em;
+  line-height: 2em;
+}
+#body-content #matches-content #homeMatches .team-name, #body-content #favorites #homeMatches .team-name {
+  display: -webkit-box;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.2rem;
+  min-height: 3.6rem;
+}
+#body-content #matches-content #homeMatches .status, #body-content #favorites #homeMatches .status {
+  padding: 3px 10px;
+  background: #ddd;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+#body-content #favorites {
+  margin-bottom: 75px;
+}
+#body-content #favorites #homeMatches {
+  margin-top: 15px !important;
+}
+
+#notfound {
+  height: 55vh;
+}
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 920px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#notfound .notfound .notfound-404 {
+  position: absolute;
+  height: 100px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+#notfound .notfound .notfound-404 h1 {
+  font-family: "Maven Pro", sans-serif;
+  color: #ececec;
+  font-weight: 900;
+  font-size: 30vw;
+  margin: 0px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#notfound .notfound h2 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 46px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+#loading {
+  height: 55vh;
+  display: none;
+}
+#loading .loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 10%;
+  left: 7%;
+}
+
+@media (max-width: 992px) {
+  nav#nav-bottom {
+    display: block;
+  }
+
+  .container {
+    margin-bottom: 70px;
+  }
+
+  .container-fluid {
+    margin-bottom: 70px;
+  }
+
+  .fixed-action-btn {
+    bottom: 75px;
+  }
+
+  #toast-container {
+    min-width: 100%;
+    left: 0 !important;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .container-fluid {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 601px) {
+  nav#nav-top .nav-wrapper .brand-logo img {
+    height: 45px;
+    margin-top: 5px;
+  }
+
+  .container-fluid {
+    width: 85%;
+  }
+
+  #body-content #matches-content .menu {
+    top: 55px;
+  }
+
+  #toast-container {
+    bottom: 8%;
+  }
+}
+@media (max-width: 480px) {
+  #notfound .notfound .notfound-404 h1 {
+    font-size: 162px;
+  }
+  #notfound .notfound h2 {
+    font-size: 26px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
