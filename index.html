@@ -69,7 +69,7 @@
         if ("serviceWorker" in navigator) {
             window.addEventListener("load", function() {
                 navigator.serviceWorker
-                .register("/English-Premiere-League/service-worker.js")
+                .register("/service-worker.js")
                 .then(function(reg) {
                     var serviceWorker;
                     if (reg.installing) {
@@ -123,7 +123,7 @@
                             navigator.serviceWorker.getRegistration().then(function(registration) {
                                 registration.pushManager.subscribe({
                                     userVisibleOnly: true,
-                                    applicationServerKey: urlBase64ToUint8Array("BJ73EFmPzX5OXy_W9Uye1UnieRZT1TIC3p2AvuGBOr0vHaaGFdwMF6iO8FBFpNF1oWvLYYRfdL8rm3Pfh6d2Z88")
+                                    applicationServerKey: urlBase64ToUint8Array("BOO5COv4vEZ6JX0HQP94wfslmlFTuqrqXOYlYB0r2hZLKcltDKScf3SJkT4StCiRygIdvlr0BmP2RjqHvFuAiNg")
                                 }).then(function(subscribe) {
                                     console.log('Berhasil melakukan subscribe dengan endpoint: ', subscribe.endpoint);
                                     console.log('Berhasil melakukan subscribe dengan p256dh key: ', btoa(String.fromCharCode.apply(

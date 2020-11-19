@@ -29,6 +29,7 @@ workbox.precaching.precacheAndRoute([
     { url: '/English-Premiere-League/icon/icon-512.png', revision: '1' },
     { url: '/English-Premiere-League/img/logo2.png', revision: '1' },
     { url: '/English-Premiere-League/img/loader.gif', revision: '1' },
+    { url: '/English-Premiere-League/img/notification.png', revision: '1' },
     { url: '/English-Premiere-League/img/pl-footer-m-bottom.svg', revision: '1' },
     { url: '/English-Premiere-League/img/pl-footer-m-top.svg', revision: '1' },
     { url: 'https://fonts.googleapis.com/icon?family=Material+Icons', revision: '1' },
@@ -49,3 +50,24 @@ workbox.routing.registerRoute(
         cacheName: 'api'
     })
 );
+
+self.addEventListener('push', function(event) {
+    var body;
+    if (event.data) {
+        body = event.data.text();
+    } else {
+        body = 'Push message no payload';
+    }
+    var options = {
+        body: body,
+        icon: 'img/notification.png',
+        vibrate: [100, 50, 100],
+        data: {
+            dateOfArrival: Date.now(),
+            primaryKey: 1
+        }
+    };
+    event.waitUntil(
+        self.registration.showNotification('Push Notification', options)
+    );
+});
